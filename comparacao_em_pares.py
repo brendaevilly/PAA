@@ -1,4 +1,4 @@
-
+import time
 # exemplo clássico de algoritmo de ordenação em pares: bubble sort
 
 def bubble_sort(lista):
@@ -18,9 +18,18 @@ if __name__ == "__main__":
     
     print("Vetor 1 antes: ", lista1)
     print("Vetor 2 antes: ", lista2)
+    
+    start_time = time.perf_counter()
     v1 = bubble_sort(lista1)
+    end_time = time.perf_counter()
+    print("Tempo gasto lista 1:", f"{end_time - start_time:.8f}", " segundos :")
+
+    tempo_inicio = time.perf_counter()
     v2 = bubble_sort(lista2)
-    print(" ")
+    tempo_fim = time.perf_counter()
+    print("Tempo gasto lista 2:", f"{tempo_fim - tempo_inicio:.8f}", " segundos :")
+
+    print(" ")13333332
     print("Vetor 1 depois: ", v1)
     print("Vetor 2 depois: ", v2)
     
